@@ -1,0 +1,10 @@
+@import './../general/settings/init.scss';
+
+@import './../mixin/adaptiveMixin.scss';
+
+@import './../general/skelets/button.scss';
+
+@import './../component/mixin/header.scss';
+@import './../component/mixin/footer.scss';
+
+@import './../component/page/index/**/*.scss';

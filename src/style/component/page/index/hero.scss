@@ -1,0 +1,112 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #ecffeb;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    @media (max-width: 700px) {
+      grid-template-rows: auto auto;
+    };
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    @include adaptivePropertyMobile(padding-top, 71, 20);
+    @include adaptivePropertyMobile(padding-bottom, 138, 37);
+    grid-column: 1/1;
+    grid-row: 1/1;
+    @media (max-width: 700px) {
+      @include adaptivePropertyMobile(padding-bottom, 0, 0);
+    };
+  }
+
+  &__subtitle {
+    @include adaptivePropertyMobile(margin-bottom, 10, 10);
+    @include adaptivePropertyMobile(font-size, 20, 10);
+    font-weight: 600;
+    color: var(--secondary-textColor);
+    @media (max-width: 700px) {
+      text-align: center;
+    };
+  }
+
+  &__title {
+    @include adaptivePropertyMobile(margin-bottom, 20, 12);
+    @include adaptivePropertyMobile(font-size, 65, 30);
+    font-weight: 600;
+    text-transform: uppercase;
+    @media (max-width: 700px) {
+      text-align: center;
+    };
+  }
+
+  &__text {
+    max-width: 45%;
+    @include adaptivePropertyMobile(margin-bottom, 57, 12);
+    font-weight: 500;
+    @include adaptivePropertyMobile(font-size, 20, 10);
+    color: var(--secondary-textColor);
+    @media (max-width: 700px) {
+      max-width: 80%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    };
+  }
+
+  &__links {
+    display: flex;
+    @include adaptivePropertyMobile(gap, 20, 8);
+    @media (max-width: 700px) {
+      justify-content: center;
+    };
+    @media (max-width: 340px) {
+      flex-direction: column;
+      align-items: center;
+    };
+  }
+
+  &__link {
+    --button-color: var(--primary-color);
+    --button-textColor: var(--tertiary-textColor);
+
+    @include adaptivePropertyMobile(width, 285, 141);
+    @include adaptivePropertyMobile(height, 66, 30);
+    & > span {
+      @include adaptivePropertyMobile(font-size, 18, 10);
+      font-weight: 600;
+    }
+    &:nth-child(2) {
+      --button-textColor: var(--primary-textColor);
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    @include adaptivePropertyMobile(width, 681, 231);
+    @include adaptivePropertyMobile(height, 556, 196);
+    grid-column: 1/1;
+    grid-row: 1/1;
+    justify-self: end;
+    align-self: end;
+    @media (max-width: 850px) {
+      @include adaptivePropertyMobile(width, 581, 231);
+      @include adaptivePropertyMobile(height, 484, 196);
+    };
+    @media (max-width: 700px) {
+      grid-row: 2/3;
+      justify-self: center;
+    };
+    & > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.button {
+  --button-color: none;
+  --button-textColor: none;
+
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0% 5%;
+  border: 1px solid var(--button-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  & > span {
+    color: var(--button-textColor)
+  }
+}
+.button-fill {
+  background-color: var(--button-color);
+}
+.button-border {
+}

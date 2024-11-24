@@ -1,0 +1,25 @@
+:root {
+
+  //Font
+  --primary-fontFamily: "Montserrat", sans-serif;
+  --secondary-fontFamily: "Raleway", sans-serif;
+  --tertiary-fontFamily: "Inter", sans-serif;
+  --primary-fontWeight: 400;
+
+  //Color
+  --primary-color: #55a630;
+  --primary-light-color: #B7ECB1;
+  --secondary-color: #424242;
+  --tertiary-color: #ffffff;
+
+  --primary-textColor: var(--primary-color);
+  --secondary-textColor: var(--secondary-color);
+  --tertiary-textColor: var(--tertiary-color);
+
+
+  --primary-bgColor: var(--tertiary-color);
+  --secondary-bgColor: var(--secondary-color);
+}
+  
+  
+  

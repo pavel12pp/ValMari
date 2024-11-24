@@ -1,0 +1,73 @@
+.form {
+  @include adaptivePropertyMobile(margin-bottom, 175, 80);
+  &__container {
+    position: relative;
+    padding: 0px 10px;
+    @include adaptivePropertyMobile(padding-top, 75, 20);
+    @include adaptivePropertyMobile(padding-bottom, 75, 20);
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 2px 20px 0 rgba(66, 66, 66, 0.15);
+      background: var(--primary-bgColor);
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  &__title {
+    @include adaptivePropertyMobile(margin-bottom, 20, 20);
+    text-align: center;
+    @include adaptivePropertyMobile(font-size, 30, 20);
+    font-weight: 600;
+  }
+
+  &__description {
+    @include adaptivePropertyMobile(margin-bottom, 60, 36);
+    text-align: center;
+    font-weight: 500;
+    @include adaptivePropertyMobile(font-size, 16, 15);
+    color: var(--secondary-textColor);
+  }
+
+  &__form {
+    @include adaptivePropertyMobile(width, 426, 286);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    & > input {
+      display: block;
+      width: 100%;
+      @include adaptivePropertyMobile(height, 60, 44);
+      @include adaptivePropertyMobile(padding-left, 34, 23);
+      border: 1px solid var(--primary-color);
+      @include adaptivePropertyMobile(font-size, 16, 14);
+      &::placeholder {
+        @include adaptivePropertyMobile(font-size, 16, 14);
+        color: #9c9c9c;
+      }
+    }
+  }
+
+  &__name {
+    @include adaptivePropertyMobile(margin-bottom, 15, 11);
+  }
+
+  &__phone {
+    @include adaptivePropertyMobile(margin-bottom, 30, 23);
+  }
+
+  &__submit {
+    --button-color: var(--primary-color);
+    --button-textColor: var(--tertiary-textColor);
+
+    display: block;
+    width: 100%;
+    @include adaptivePropertyMobile(height, 60, 44);
+    font-weight: 600;
+    @include adaptivePropertyMobile(font-size, 23, 15);
+  }
+}
