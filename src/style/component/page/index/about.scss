@@ -89,13 +89,37 @@
 
   &__link {
     display: flex;
+    width: fit-content;
+    margin-left: auto;
     align-items: center;
-    justify-content: end;
+    &:hover {
+      & .about__link-icon {
+        @keyframes about-link-icon {
+          from {
+            translate: 0%;
+          }
+          50% {
+            translate: -30%;
+          }
+          to {
+            translate: 0%;
+          }
+        }
+        animation-name: about-link-icon;
+        animation-duration: 0.5s;
+        animation-timing-function: cubic-bezier(0,.53,.53,.79);
+
+
+      }
+      & .about__link-text {
+        color: hsl(from var(--secondary-textColor) h s calc(l - 20));
+      }
+    }
     @media (max-width: 700px) {
       order: 2;
     };
     @media (max-width: 400px) {
-      justify-content: center;
+      margin-right: auto;
     };
   }
   &__link-text {
@@ -103,11 +127,13 @@
     @include adaptivePropertyMobile(font-size, 25, 14);
     color: var(--secondary-textColor);
     font-weight: 500;
+    transition: 0.5s;
   }
   &__link-icon {
     display: block;
     @include adaptivePropertyMobile(width, 58, 35);
     height: 18px;
+    animation: none;
     & > svg {
       display: block;
       width: 100%;

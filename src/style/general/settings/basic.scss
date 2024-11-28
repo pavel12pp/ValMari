@@ -12,7 +12,9 @@ body {
 }
 .wrapper {
   display: flex;
-  min-height: 100%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: clip;
   flex-direction: column;
 }
 main {
