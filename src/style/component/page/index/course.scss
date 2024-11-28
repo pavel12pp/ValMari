@@ -28,6 +28,7 @@
   }
 
   &__wrapper {
+    pointer-events: none;
 
   }
 
@@ -106,8 +107,7 @@
   }
 }
 .course-slide {
-
-  // @include adaptivePropertyMobile(width, 361, 202);
+  pointer-events: none;
   opacity: 0;
   @include adaptivePropertyMobile(padding, 16, 10);
   @include adaptivePropertyMobile(padding-bottom, 112, 60);
@@ -115,6 +115,7 @@
   background: var(--primary-bgColor);
   transition: all 0.2s;
   &.visible {
+    pointer-events: all;
     opacity: 1;
   }
   @media (max-width: 600px) {

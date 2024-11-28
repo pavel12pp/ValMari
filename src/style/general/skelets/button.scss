@@ -3,19 +3,36 @@
   --button-textColor: none;
 
   display: flex;
+  position: relative;
   overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0% 5%;
+  padding: 0% 2%;
   border: 1px solid var(--button-color);
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  --light: hsl(from var(--button-color) calc(h + 20) s l);
+  transition: all 0.2s;
   & > span {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--button-textColor)
   }
 }
 .button-fill {
   background-color: var(--button-color);
+  &:hover {
+    border: 1px solid hsl(from var(--button-color) h  s calc(l - 10));
+    background-color: hsl(from var(--button-color) h  s calc(l - 10))
+  }
 }
 .button-border {
+  &:hover {
+    border: 1px solid hsl(from var(--button-color) h  s calc(l - 10));
+    background-color: hsl(from var(--button-color) h  s calc(l - 10));
+    & > span {
+      color: var(--tertiary-textColor);
+    }
+  }
 }

@@ -1,0 +1,96 @@
+.why {
+  @include adaptivePropertyMobile(margin-bottom, 175, 80);
+  &__container {
+  }
+
+  &__title {
+    @include adaptivePropertyMobile(margin-bottom, 75, 40);
+    font-weight: 600;
+    color: var(--secondary-color);
+    @include adaptivePropertyMobile(font-size, 35, 20);
+    text-align: center;
+  }
+
+  &__points {
+    display: flex;
+    @include adaptivePropertyMobile(row-gap, 30, 20);
+    @include adaptivePropertyMobile(column-gap, 50, 40);
+    align-items: stretch;
+    @media (max-width: 900px) {
+      flex-direction: column;
+    };
+
+  }
+
+  &__point {
+    flex: 1 0 0px;
+    @media (max-width: 500px) {
+      flex: 0 0 auto;
+    };
+  }
+}
+
+.why-point {
+  position: relative;
+  @include adaptivePropertyMobile(padding-left, 30, 15);
+  @include adaptivePropertyMobile(padding-top, 40, 40);
+  @include adaptivePropertyMobile(padding-right, 15, 15);
+  @include adaptivePropertyMobile(padding-bottom, 15, 10);
+  box-shadow: 0 3px 20px 0 rgba(66, 66, 66, 0.15);
+  background: var(--tertiary-color);
+  @media (max-width: 500px) {
+    @include adaptivePropertyMobile(padding-bottom, 45, 30);
+  };
+  &:nth-child(2) {
+    background: var(--primary-light-color);
+    & .why-point__number {
+      color: rgba(255, 255, 255, 0.3);
+      bottom: auto;
+      top: 0px;
+    }
+    @media (max-width: 500px) {
+      background: var(--tertiary-color);
+      & .why-point__number {
+        color: var(--primary-color);
+        bottom: 0px;
+        top: auto;
+      }
+    };
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    @include adaptivePropertyMobile(margin-bottom, 33, 20);
+    font-weight: 600;
+    @include adaptivePropertyMobile(font-size, 25, 15);
+    color: var(--secondary-color);
+    @media (max-width: 500px) {
+      text-align: center;
+    };
+  }
+
+  &__description {
+    position: relative;
+    z-index: 1;
+    @include adaptivePropertyMobile(font-size, 20, 15);
+    line-height: 1.15;
+    color: #1c1e23;
+    opacity: 0.8;
+    @media (max-width: 500px) {
+      text-align: center;
+    };
+  }
+
+  &__number {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    bottom: 0px;
+    font-weight: 500;
+    @include adaptivePropertyMobile(font-size, 180, 50);
+    @media (max-width: 500px) {
+      display: none;
+    };
+  }
+}

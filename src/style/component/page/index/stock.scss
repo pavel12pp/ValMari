@@ -22,16 +22,19 @@
 
   &__wrapper {
     position: relative;
+    pointer-events: none;
     @include adaptivePropertyMobile(margin-bottom, 75, 50);
     z-index: 1;
   }
 
   &__slide {
+    pointer-events: none;
     position: relative;
     opacity: 0;
     aspect-ratio: 1/1;
     &.visible {
       opacity: 1;
+      pointer-events: all;
     }
     @media (max-width: 600px) {
       opacity: 1;
