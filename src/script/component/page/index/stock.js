@@ -6,6 +6,7 @@ new Swiper('.stock-slider', {
   navigation: {
     nextEl: ".stock__button-next",
     prevEl: ".stock__button-prev",
+    disabledClass: "disabled",
   },
   grabCursor: true,
   pagination: {

@@ -25,13 +25,20 @@
     pointer-events: none;
     @include adaptivePropertyMobile(margin-bottom, 75, 50);
     z-index: 1;
+    @media (max-width: 1200px) {
+      pointer-events: all;
+    };
   }
 
   &__slide {
-    pointer-events: none;
     position: relative;
     opacity: 0;
     aspect-ratio: 1/1;
+    transition: all 0.2s;
+    pointer-events: none;
+    @media (max-width: 1200px) {
+      pointer-events: all;
+    };
     &.visible {
       opacity: 1;
       pointer-events: all;
@@ -77,20 +84,40 @@
     height: 22px;
     background: transparent;
     top: 190px;
+    transition: all 0.2s;
     &::after {
       content: '';
       display: block;
       position: absolute;
-      width: 200%;
+      z-index: -1;
       height: 200%;
+      width: auto;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
       top: 50%;
       left: 50%;
       translate: -50% -50%;
+      transition: all 0.2s;
+    }
+    &.disabled {
+      & > svg {
+        fill: hsl(from var(--secondary-color) h s calc(l + 30));
+      }
+    }
+    &:not(.disabled):hover {
+      & > svg {
+        fill: hsl(from var(--secondary-color) h s calc(l - 30));
+      }
+    }
+    &:not(.disabled):active::after {
+      background-color: hsla(from var(--secondary-color) h s calc(l - 20) / 0.3);
     }
     & > svg {
       display: block;
+      position: relative;
+      z-index: 0;
       width: 100%;
-      height: 100%;
+      transition: all 0.2s;
     }
   }
 

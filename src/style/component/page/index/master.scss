@@ -37,6 +37,9 @@
     opacity: 0;
     transition: all 0.2s;
     pointer-events: none;
+    @media (max-width: 1200px) {
+      pointer-events: all;
+    };
     &.visible {
       pointer-events: all;
       opacity: 1;
@@ -59,6 +62,7 @@
     left: -20px;
     rotate: -180deg;
     cursor: pointer;
+    transition: all 0.2s;
     @media (max-width: 1300px) {
       display: none;
     };
@@ -66,16 +70,33 @@
       content: '';
       display: block;
       position: absolute;
-      width: 150%;
-      height: 150%;
+      width: auto;
+      height: 200%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
       top: 50%;
       left: 50%;
       translate: -50% -50%;
+      transition: all 0.2s;
+    }
+    &.disabled {
+      & > svg {
+        fill: hsl(from var(--secondary-color) h s calc(l + 30));
+      }
+    }
+    &:not(.disabled):hover {
+      & > svg {
+        fill: hsl(from var(--secondary-color) h s calc(l - 30));
+      }
+    }
+    &:not(.disabled):active::after {
+      background-color: hsla(from var(--secondary-color) h s calc(l - 20) / 0.3);
     }
     & > svg {
       display: block;
       width: 100%;
       height: 100%;
+      transition: all 0.2s;
     }
   }
 
@@ -87,6 +108,35 @@
   }
 
   &__pagination {
+    display: flex;
+    @include adaptivePropertyMobile(gap, 15, 7);
+    justify-content: center;
+  }
+
+  &__pagination-bullet {
+    display: block;
+    position: relative;
+    opacity: 1;
+    @include adaptivePropertyMobile(width, 15, 7);
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--primary-light-color);
+    margin: 0px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      aspect-ratio: 1/1;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+    }
+    &.active {
+      background-color: var(--primary-color);
+
+    }
   }
 }
 .master-slide {
