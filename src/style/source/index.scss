@@ -1,11 +1,20 @@
-@import './../general/settings/init.scss';
-
+@import './../mixin/variable.scss';
 @import './../mixin/adaptiveMixin.scss';
 @import './../mixin/adaptiveVarMixin.scss';
 
-@import './../general/skelets/button.scss';
+@layer reset, default, library, themes, patterns, components;
 
-@import './../component/mixin/header.scss';
-@import './../component/mixin/footer.scss';
+@import './../general/settings/init.scss';
 
-@import './../component/page/index/**/*.scss';
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css") layer(library);
+
+@layer patterns {
+  @import './../general/skelets/button.scss';
+}
+
+@layer components{
+  @import './../component/mixin/header.scss';
+  @import './../component/mixin/footer.scss';
+  
+  @import './../component/page/index/**/*.scss';
+}

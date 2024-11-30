@@ -12,19 +12,13 @@ body {
 }
 .wrapper {
   display: flex;
-  height: 100%;
-  overflow: scroll;
-  overflow-x: clip;
+  min-height: 100%;
   flex-direction: column;
 }
 main {
   flex: 1 0 auto;
   width: 100%;
 }
-$canvasDesktop: 1440;
-$canvasMobile: 320;
-$containerDesktop: 1200;
-$containerMobile: 300;  
 
 .container {
   max-width: #{$containerDesktop + 40 + px};

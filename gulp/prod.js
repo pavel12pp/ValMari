@@ -102,6 +102,7 @@ gulp.task("move-asset:prod", function(done) {
   gulp.src("./src/asset/font/**/*").pipe(changed("./build/font/")).pipe(gulp.dest("./build/font/"));
   gulp.src("./src/asset/video/**/*").pipe(changed("./build/video/")).pipe(gulp.dest("./build/video/"));
   gulp.src("./src/asset/file/**/*").pipe(changed("./build/file/")).pipe(gulp.dest("./build/file/"));
+  gulp.src("./src/asset/favicon.ico").pipe(changed("./build/")).pipe(gulp.dest("./build/"));
   done()
 })
 

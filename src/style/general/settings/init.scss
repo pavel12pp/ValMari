@@ -1,3 +1,7 @@
-@import './globalVar.scss';
-@import './zeroingStyle.scss';
-@import './basic.scss';
+@layer reset {
+  @import './zeroingStyle.scss';
+}
+@layer default {
+  @import './globalVar.scss';
+  @import './basic.scss';
+} 
