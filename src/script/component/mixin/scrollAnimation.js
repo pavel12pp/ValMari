@@ -127,16 +127,6 @@ gsap.from('.about__image', {
   }
 })
 
-gsap.from('.train__image', {
-  y: "10dvh",
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".train__image",
-    start: "top 90%",
-    end: "bottom 0%",
-  }
-})
 
 gsap.from('.model__title', {
   y: "10dvh",

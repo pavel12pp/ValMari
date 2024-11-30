@@ -1,5 +1,6 @@
 import "./../component/mixin/header.js";
 import "./../component/mixin/scrollAnimation.js";
+import "./../component/mixin/languageSelect.js";
 import "./../component/page/index/course.js";
 import "./../component/page/index/map.js";
 import "./../component/page/index/stock.js";
