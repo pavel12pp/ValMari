@@ -17,7 +17,6 @@ gsap.from('.hero__subtitle', {
     trigger: ".hero__subtitle",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.hero__title', {
@@ -29,7 +28,6 @@ gsap.from('.hero__title', {
     trigger: ".hero__title",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.hero__text', {
@@ -41,7 +39,6 @@ gsap.from('.hero__text', {
     trigger: ".hero__text",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.hero__links', {
@@ -53,7 +50,6 @@ gsap.from('.hero__links', {
     trigger: ".hero__links",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.hero__image', {
@@ -63,7 +59,6 @@ gsap.from('.hero__image', {
     trigger: ".hero__image",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -76,7 +71,6 @@ gsap.from('.stat__container', {
     trigger: ".stat__container",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -88,7 +82,6 @@ gsap.from('.course__title', {
     trigger: ".course__title",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -100,7 +93,6 @@ gsap.from('.about__title', {
     trigger: ".about__title",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.about__subtitle', {
@@ -112,7 +104,6 @@ gsap.from('.about__subtitle', {
     trigger: ".about__subtitle",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.about__text', {
@@ -124,7 +115,6 @@ gsap.from('.about__text', {
     trigger: ".about__text",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.about__image', {
@@ -134,7 +124,6 @@ gsap.from('.about__image', {
     trigger: ".about__image",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -146,7 +135,6 @@ gsap.from('.train__image', {
     trigger: ".train__image",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -158,7 +146,6 @@ gsap.from('.model__title', {
     trigger: ".model__image",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.model__text', {
@@ -170,7 +157,6 @@ gsap.from('.model__text', {
     trigger: ".model__text",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.model__link', {
@@ -182,7 +168,6 @@ gsap.from('.model__link', {
     trigger: ".model__link",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.model__image', {
@@ -192,7 +177,6 @@ gsap.from('.model__image', {
     trigger: ".model__image",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -204,7 +188,6 @@ gsap.from('.master__title', {
     trigger: ".master__title",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.master__description', {
@@ -216,7 +199,6 @@ gsap.from('.master__description', {
     trigger: ".master__description",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -228,7 +210,6 @@ gsap.from('.why__title', {
     trigger: ".why__title",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 gsap.from('.why__point', {
@@ -243,7 +224,6 @@ gsap.from('.why__point', {
     trigger: ".why__point",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
 
@@ -255,6 +235,5 @@ gsap.from('.stock__title', {
     trigger: ".stock__title",
     start: "top 90%",
     end: "bottom 0%",
-    markers: true,
   }
 })
